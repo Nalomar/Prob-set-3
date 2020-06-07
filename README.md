@@ -1,4 +1,56 @@
-# Prob-set-3
+# PROBLEM 1
+# This code is to open the file
+fhand=open('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+# This code is a loop to find the hieghest water level and the data and time it was observerd
+fhand=open('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+count=0
+n='Water Level'
+for n in fhand:
+  if n > max_value:
+        max_value = n
+        print(line).
 
-#PROBLEM 1
-#Open the file 
+# PROBLEM 2
+# this is to read the file into a pandas dataframe and get the highest water level and datae/time        
+import pandas as pd 
+df=pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+columns= ['Date Time', ' Water Level']
+df[' Water Level']
+maxValue=df[' Water Level']
+print("Maximum value in column ' Water Level'")
+print(maxValue)
+print('Date Time')
+
+# PROBLEM 3 
+# Creating a New Column that calculates the differences in rows in Water Level Column
+my_data = pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
+df = pd.DataFrame(my_data)
+df['New_column'] = df['Water Level'].diff(1)
+print(df)
+# Going through the New Column to find the max value and then print the line of the max value
+fhand=df
+count=0
+n='New Column'
+for n in df:
+  if n > max_value:
+        max_value = n
+        print(line).
+
+
+
+
+
+
+
+
+
+
+
+ 
+ for large in alist:
+    if large > largest:
+        largest=large 
+        
+        max_value = None
+for n in nums:
+    if n > max_value: max_value = n
