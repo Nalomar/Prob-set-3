@@ -9,7 +9,7 @@ max_value = None
 for line in fhand:
   if n > max_value:
         max_value = n
-        print(line)
+        print(float(line))
 
 # PROBLEM 2
 # this is to read the file into a pandas dataframe and get the highest water level and date/time        
@@ -17,25 +17,21 @@ import pandas as pd
 df=pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
 columns= ['Date Time', ' Water Level']
 df[' Water Level']
-maxValue=df[' Water Level']
-print("Maximum value in column ' Water Level'")
-print(maxValue)
-print('line')
+maxValue=df[' Water Level'].idxmax
+print("maxValue, "Date_Time" : "Water_Level'")
 
 # PROBLEM 3 
 # Creating a New Column that calculates the differences in rows in Water Level Column
+import pandas as pd
 my_data = pd.read_csv('/ufrc/bsc4452/share/Class_Files/data/CO-OPS__8729108__wl.csv')
 df = pd.DataFrame(my_data)
 df['New_column'] = df['Water Level'].diff(1)
 print(df)
+
 # Going through the New Column to find the max value and then print the line of the max value
-fhand=df
-count=0
-n='New Column'
-for n in df:
-  if n > max_value:
-        max_value = n
-        print(line).
+Maxdiff=df['New column'].idxmax()
+print("Maxdiff", "Water_Level": "Date_Time")
+        
  
 
         
